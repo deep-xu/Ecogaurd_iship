@@ -1,0 +1,46 @@
+{
+  "name": "vue-manage-system",
+  "version": "4.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run serve",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "ailabel": "^5.1.13",
+    "axios": "^0.18.0",
+    "babel-polyfill": "^6.26.0",
+    "better-xlsx": "^0.7.6",
+    "chart.js": "^4.5.1",
+    "echarts": "^5.2.2",
+    "echarts-wordcloud": "^2.0.0",
+    "element-ui": "^2.15.13",
+    "exceljs": "^4.3.0",
+    "file-saver": "^2.0.5",
+    "fs": "^0.0.1-security",
+    "js-md5": "^0.7.3",
+    "less": "^4.0.0",
+    "less-loader": "^7.2.1",
+    "mpegts.js": "^1.8.0",
+    "swiper": "^8.4.2",
+    "vue": "^2.6.0",
+    "vue-router": "^3.0.1",
+    "vue-seamless-scroll": "^1.1.23",
+    "vuedraggable": "^2.17.0",
+    "vuex": "^3.1.0",
+    "xgplayer": "^2.32.6",
+    "xgplayer-flv": "^2.5.3",
+    "xlsx": "^0.18.5",
+    "xlsx-style": "^0.8.13"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.2.0",
+    "@vue/cli-service": "^3.2.0",
+    "crypto-js": "^4.2.0",
+    "jsencrypt": "^3.3.2",
+    "style-resources-loader": "^1.5.0",
+    "vue-cli-plugin-style-resources-loader": "^0.1.5",
+    "vue-template-compiler": "^2.5.21"
+  }
+}

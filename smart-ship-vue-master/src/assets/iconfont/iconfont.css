@@ -1,0 +1,307 @@
+@font-face {
+  font-family: "z-iconfont"; /* Project id 3451416 */
+  src: url('iconfont.woff2?t=1726651055867') format('woff2'),
+       url('iconfont.woff?t=1726651055867') format('woff'),
+       url('iconfont.ttf?t=1726651055867') format('truetype');
+}
+
+.z-iconfont {
+  font-family: "z-iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.z-icon-xuanze:before {
+  content: "\e886";
+}
+
+.z-icon-xiangshang:before {
+  content: "\e60a";
+}
+
+.z-icon-xiangxia:before {
+  content: "\ec5e";
+}
+
+.z-icon-queren:before {
+  content: "\e614";
+}
+
+.z-icon-daichuli:before {
+  content: "\e619";
+}
+
+.z-icon-yanzhengma:before {
+  content: "\e6a1";
+}
+
+.z-icon-zhuapai:before {
+  content: "\eabc";
+}
+
+.z-icon-cangku:before {
+  content: "\e612";
+}
+
+.z-icon-icon-xiazairizhi:before {
+  content: "\e659";
+}
+
+.z-icon-xitongziyuan:before {
+  content: "\e716";
+}
+
+.z-icon-play1:before {
+  content: "\e637";
+}
+
+.z-icon-xiazaishipin:before {
+  content: "\e61a";
+}
+
+.z-icon-xiazaitupian:before {
+  content: "\e751";
+}
+
+.z-icon-pinlv:before {
+  content: "\e66d";
+}
+
+.z-icon-libmanage:before {
+  content: "\e645";
+}
+
+.z-icon-warning:before {
+  content: "\e715";
+}
+
+.z-icon-video-o:before {
+  content: "\e609";
+}
+
+.z-icon-xiaolaba:before {
+  content: "\e64c";
+}
+
+.z-icon-shuaxin:before {
+  content: "\e615";
+}
+
+.z-icon-jiankonglixian:before {
+  content: "\e71d";
+}
+
+.z-icon-tuichu:before {
+  content: "\e60d";
+}
+
+.z-icon-warning1:before {
+  content: "\e68b";
+}
+
+.z-icon-jiance1:before {
+  content: "\e69a";
+}
+
+.z-icon-zhedie2:before {
+  content: "\e626";
+}
+
+.z-icon-zhankai2:before {
+  content: "\ea40";
+}
+
+.z-icon-quanping:before {
+  content: "\e635";
+}
+
+.z-icon-tuichuquanping:before {
+  content: "\e793";
+}
+
+.z-icon-shebei:before {
+  content: "\e6a0";
+}
+
+.z-icon-shijian:before {
+  content: "\e61e";
+}
+
+.z-icon-zhedie1:before {
+  content: "\e688";
+}
+
+.z-icon-zhankai1:before {
+  content: "\e7be";
+}
+
+.z-icon-close:before {
+  content: "\e6dc";
+}
+
+.z-icon-bangzhu:before {
+  content: "\e608";
+}
+
+.z-icon-refresh:before {
+  content: "\e62a";
+}
+
+.z-icon-arrow-double-left:before {
+  content: "\e665";
+}
+
+.z-icon-arrow-double-right:before {
+  content: "\e666";
+}
+
+.z-icon-pic:before {
+  content: "\e607";
+}
+
+.z-icon-alg:before {
+  content: "\e6ef";
+}
+
+.z-icon-quit:before {
+  content: "\e62b";
+}
+
+.z-icon-camera:before {
+  content: "\e605";
+}
+
+.z-icon-folder-fill:before {
+  content: "\e85e";
+}
+
+.z-icon-checked:before {
+  content: "\e67d";
+}
+
+.z-icon-search:before {
+  content: "\e67e";
+}
+
+.z-icon-uncheck:before {
+  content: "\e604";
+}
+
+.z-icon-zhuangtai:before {
+  content: "\e618";
+}
+
+.z-icon-hiddenpassword:before {
+  content: "\ea22";
+}
+
+.z-icon-showpassword:before {
+  content: "\ea3f";
+}
+
+.z-icon-password1:before {
+  content: "\e620";
+}
+
+.z-icon-user1:before {
+  content: "\e622";
+}
+
+.z-icon-service-reboot:before {
+  content: "\e652";
+}
+
+.z-icon-xiazai:before {
+  content: "\e7bd";
+}
+
+.z-icon-device-reboot:before {
+  content: "\e61d";
+}
+
+.z-icon-password:before {
+  content: "\e606";
+}
+
+.z-icon-del:before {
+  content: "\e72d";
+}
+
+.z-icon-edit:before {
+  content: "\e731";
+}
+
+.z-icon-add:before {
+  content: "\e602";
+}
+
+.z-icon-idc_device_model:before {
+  content: "\e7d4";
+}
+
+.z-icon-night:before {
+  content: "\e65e";
+}
+
+.z-icon-Daytimemode:before {
+  content: "\e771";
+}
+
+.z-icon-banbenqiehuan:before {
+  content: "\e792";
+}
+
+.z-icon-stop:before {
+  content: "\e640";
+}
+
+.z-icon-user:before {
+  content: "\e629";
+}
+
+.z-icon-shangbao:before {
+  content: "\e6bf";
+}
+
+.z-icon-video:before {
+  content: "\e634";
+}
+
+.z-icon-ninevideo:before {
+  content: "\e600";
+}
+
+.z-icon-onevideo:before {
+  content: "\e603";
+}
+
+.z-icon-fourvideo:before {
+  content: "\e601";
+}
+
+.z-icon-oridata:before {
+  content: "\e6f6";
+}
+
+.z-icon-system:before {
+  content: "\e706";
+}
+
+.z-icon-zhankai:before {
+  content: "\e707";
+}
+
+.z-icon-target:before {
+  content: "\e61b";
+}
+
+.z-icon-zhedie:before {
+  content: "\e647";
+}
+
+.z-icon-index:before {
+  content: "\e624";
+}
+

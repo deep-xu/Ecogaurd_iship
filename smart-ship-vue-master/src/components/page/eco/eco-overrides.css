@@ -1,0 +1,160 @@
+/* ============================================================
+   eco-overrides.css  —  layout width / full-viewport coverage
+   Loaded AFTER eco.css. Safe to delete to revert.
+   ============================================================ */
+
+/* Fill the whole width instead of a centered 1520px column */
+.eco-root .page {
+  max-width: none;
+  margin: 0;
+  padding: 18px 32px 28px;
+}
+
+/* Let the main content area grow to the full viewport height.
+   60px topbar + ~53px subbar = ~113px of chrome. */
+.eco-root .view.active {
+  min-height: calc(100vh - 60px);
+}
+
+/* ---------- Dashboard ---------- */
+.eco-root #view-dashboard .grid3 {
+  align-items: stretch;
+}
+.eco-root #view-dashboard .grid3 > .card {
+  min-height: calc(100vh - 260px);
+}
+
+/* ---------- Activities / tables ---------- */
+.eco-root #view-activities .page > .card,
+.eco-root #view-map .page > .card {
+  min-height: 0;
+}
+
+/* table header: source sets th padding-top:0, so labels sit flush against the
+   card's rounded top edge and read as floating text. Give it a real header band. */
+.eco-root table.activity-table thead th {
+  padding: 14px 12px 12px;
+  background: #F5F8FD;
+  border-bottom: 1px solid var(--border);
+}
+.eco-root table.activity-table thead th:first-child {
+  border-top-left-radius: var(--radius);
+}
+.eco-root table.activity-table thead th:last-child {
+  border-top-right-radius: var(--radius);
+}
+
+/* ---------- Map ---------- */
+.eco-root .map-shell {
+  height: calc(100vh - 340px);
+  min-height: 380px;
+  background: #0b1f45;
+}
+/* soft depth vignette over the ocean */
+.eco-root .map-shell::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 1;
+  background:
+    radial-gradient(120% 90% at 50% 40%, transparent 55%, rgba(4, 10, 26, 0.55) 100%),
+    linear-gradient(180deg, rgba(4, 10, 26, 0.12), rgba(4, 10, 26, 0.28));
+}
+.eco-root .map-img-wrap img {
+  filter: none;
+  image-rendering: auto;
+}
+/* route: thicker, glowing, gently flowing dashes */
+.eco-root .route-line {
+  stroke: #7db3ff;
+  stroke-width: 2.5;
+  stroke-dasharray: 2 9;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 4px rgba(46, 123, 255, 0.7));
+  animation: ecoRouteFlow 2.2s linear infinite;
+}
+@keyframes ecoRouteFlow {
+  to { stroke-dashoffset: -11; }
+}
+/* vessel marker: crisper core + slow pulse ring */
+.eco-root .vessel-dot {
+  width: 12px;
+  height: 12px;
+  background: #2e7bff;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.9), 0 0 0 8px rgba(46, 123, 255, 0.35);
+}
+.eco-root .vessel-dot::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid rgba(46, 123, 255, 0.55);
+  animation: ecoPing 2s ease-out infinite;
+}
+@keyframes ecoPing {
+  0%   { transform: scale(0.6); opacity: 0.9; }
+  100% { transform: scale(2.2); opacity: 0; }
+}
+/* port pins + labels */
+.eco-root .port-dot {
+  width: 7px;
+  height: 7px;
+  box-shadow: 0 0 0 2px rgba(8, 19, 44, 0.6), 0 0 0 4px rgba(255, 255, 255, 0.25);
+}
+.eco-root .port-label {
+  background: rgba(8, 19, 44, 0.72);
+  padding: 3px 7px;
+  border-radius: 5px;
+  text-shadow: none;
+  letter-spacing: 0.3px;
+  backdrop-filter: blur(2px);
+}
+/* tooltip: stronger lift */
+.eco-root .map-tooltip {
+  box-shadow: 0 10px 32px rgba(4, 10, 26, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+/* zoom + legend: match the app chrome */
+.eco-root .zoom-controls button {
+  background: rgba(8, 19, 44, 0.65);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+.eco-root .zoom-controls button:hover {
+  background: #2e7bff;
+  border-color: #2e7bff;
+}
+
+/* ---------- Sensors ---------- */
+.eco-root .sensor-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+@media (max-width: 1100px) {
+  .eco-root .sensor-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .eco-root .sensor-grid { grid-template-columns: 1fr; }
+}
+
+/* ---------- Thermal ---------- */
+.eco-root #view-thermal .therm-layout {
+  min-height: calc(100vh - 200px);
+}
+.eco-root .therm-viewport {
+  min-height: calc(100vh - 220px);
+}
+.eco-root .zone-card,
+.eco-root .points-card {
+  overflow: auto;
+}
+
+/* On smaller screens fall back to natural flow */
+@media (max-width: 1100px) {
+  .eco-root .view.active,
+  .eco-root #view-dashboard .grid3 > .card,
+  .eco-root #view-thermal .therm-layout,
+  .eco-root .therm-viewport {
+    min-height: 0;
+  }
+  .eco-root .map-shell { height: 60vh; }
+}

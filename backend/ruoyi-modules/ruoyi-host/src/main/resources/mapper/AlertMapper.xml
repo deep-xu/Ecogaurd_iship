@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.dromara.host.mapper.AlertMapper">
+
+<!--
+/* String retryDelayCalc = """
+        CASE
+            WHEN last_try_time IS NULL THEN 0
+            ELSE EXTRACT(EPOCH FROM (NOW() - last_try_time)) - (300 * POWER(2, LEAST(retry_count, 10)))
+        END
+        """;*/
+-->
+    <select id="createQuery" resultType="org.dromara.host.domain.vo.AlertVo">
+        SELECT *
+        FROM alert_bk d
+        WHERE d.syncStatus in (1)   -- 'PENDING' OR 'FAILED' )
+        ORDER BY d.retryCount DESC, d.timestamp ASC limit 50
+    </select>
+
+
+</mapper>

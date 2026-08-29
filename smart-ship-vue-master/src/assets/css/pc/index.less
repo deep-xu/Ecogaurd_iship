@@ -1,0 +1,66 @@
+
+// @font-face {
+//     font-family: "z-font";
+//     src:url('../../font/zql.otf?t=1656579232928') format('opentype');
+// }
+/* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+// @font-face {
+//     font-family: "z-font";
+//     font-weight: 500;
+//     src: url("//at.alicdn.com/wf/webfont/SngLVj93Po8u/cLVPM_e_7Mk-0OzEHKlHX.woff2") format("woff2"),
+//     url("//at.alicdn.com/wf/webfont/SngLVj93Po8u/mzHWZ-JtPAeCXjJyd96Jl.woff") format("woff");
+//     font-display: swap;
+//   }
+*{
+    margin: 0;
+    padding: 0;
+    // user-select:none;
+}
+ul{
+    list-style: none
+}
+html,textarea{
+    // font-family:'z-font', 'Arial', 'Microsoft YaHei', 'Segoe UI', Helvetica, 'FreeSans', 'Arimo', 'sans-serif';
+    font-family: pingfang SC, helvetica neue, arial, hiragino sans gb, microsoft yahei ui, microsoft yahei, simsun, sans-serif;
+}
+[class*="z-icon-"] {
+    font-family: "z-iconfont" !important;
+    font-size: 16rem;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+@import url(./layout.less);
+@import url(./main.less);
+@import url(./dialog.less);
+@import url(./form.less);
+@import url(./re-ele.less);
+@import url(./screen.less);
+
+#app{
+    width: 100vw;
+    height: 100vh;
+}
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* 滚动条 */
+::-webkit-scrollbar-track-piece {
+    background-color: #fff;
+}
+  
+::-webkit-scrollbar { //滚动条的宽度
+    width: 4px;
+    height: 1px;
+}
+  
+::-webkit-scrollbar-thumb { //滚动条的设置
+    background-color: @menuText;
+    min-height: 28px;
+}
+  
+// ::-webkit-scrollbar-thumb:hover {
+//     background-color: @MaincontainerBg;
+// }

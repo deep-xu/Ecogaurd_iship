@@ -1,0 +1,220 @@
+
+.layout{
+    .logo{
+      height: 60rem;
+      line-height: 60rem;
+      display: flex;
+      width: 220rem;
+      background-color: #fff;
+      padding-left: 20rem;
+    }
+    .logo .header-logo-link{
+      display: flex;
+      color: @mainActiveText;
+      align-items: center;
+      text-decoration: none;
+      height: 60rem;
+    }
+    .logo .header-logo{
+      max-width: 150rem;
+      max-height: 50rem;
+      margin-right: 2rem; 
+    }
+    .logo .header-title{
+      display: flex;
+      font-size: 20rem;
+      margin-left: 5rem;
+      color: #000;
+      img{
+        width: 50rem;
+      }
+    }
+    .sidebar {
+      display: block;
+      z-index: 2;
+      background-color: @menuBg;
+      position: absolute;
+      // top:50rem;
+      left: 0;
+      width: 220rem;
+      height: 100%;
+      // border-right: 1rem solid #ebebeb;
+      transition: all 0.3s;
+      .sidebar-resize{
+        position: absolute;
+        top: calc((100% - 60rem)* 0.5);
+        left: 220rem;
+        z-index: 100;
+        cursor: pointer;
+        transition: all .3s;
+        border-left: 15rem solid @menuBg;
+        border-top: 6rem solid transparent;
+        border-bottom: 6rem solid transparent;
+        height: 60rem;
+        line-height: 44rem;
+        width: 0;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+        .el-icon-arrow-left,.el-icon-arrow-right{
+          margin-left: -17rem;
+          font-size: 16rem;
+          color: @menuActiveText;
+        }
+      }
+    }
+    
+    .sidebar::-webkit-scrollbar {
+      width: 0;
+    }
+    .sidebar-el-menu:not(.el-menu--collapse) {
+      width: 220rem;
+      background-size: 100% 100%;
+    }
+    .sidebar > ul {
+      height: 100%;
+      overflow: auto;
+    }
+    .sidebar ::-webkit-scrollbar-track-piece {
+      background-color: @menuBg;
+    }
+    .sidebar ::-webkit-scrollbar-thumb { //滚动条的设置
+      background-color: @menuText;
+      min-height: 28rem;
+    }
+    .el-menu {
+      background-color: transparent;
+      border: none;
+    }
+    .el-menu-item{
+      // font-size: 16rem;
+      font-size: 16rem;
+      color: @menuText;
+      border-left: 4rem solid transparent;
+    }
+    .el-menu-item:focus, .el-menu-item:hover{
+        color: @menuActiveText;
+        background-color: transparent;
+        i{
+          color: @menuActiveText;
+        }
+    }
+    .el-menu-item.is-active{
+      background-color: @menuHoverBg;
+      border-left: 4rem solid @menuActiveLeft;
+    }
+    .el-menu-item.is-active i{
+        color: @menuActiveText
+    }
+    .el-menu-item.disabled{
+      color: #aaa;
+      cursor: not-allowed;
+      // background-color: ;
+    }
+    .el-menu-item.disabled i,
+    .el-menu-item.disabled:hover i{
+      color: #aaa;
+    }
+    .el-submenu.is-opened .el-menu--inline {
+      background-color: transparent !important;
+
+    }
+    .el-submenu [class^="el-icon-"] {
+      margin-right: 0;
+    }
+    .menu-item .el-submenu__title {
+      display: flex;
+      align-items: center;
+      color: @menuText;
+      font-size: 16rem;
+      line-height: normal;
+      border-left: 4rem solid transparent;
+    }
+    .menu-item .el-submenu__title i {
+      color: @menuText;
+    }
+    .menu-item .is-opened .el-submenu__title i {
+      width: auto;
+      // height: 18rem;
+    }
+    .menu-item .el-submenu__title i.el-submenu__icon-arrow,
+    .menu-item .is-opened .el-submenu__title i.el-submenu__icon-arrow{
+      height: auto;
+    }
+    .menu-item  .el-submenu .el-menu-item {
+      padding: 0;
+      padding-left: 55rem !important;
+    }
+    .menu-item  .el-submenu__title:hover{
+      background-color: transparent;
+      color: @menuActiveText;
+    }
+    .menu-item  .el-submenu__title:hover i,
+    .el-menu-item.is-active span,
+    .menu-item .el-submenu__title .el-icon-setting {
+      color: @menuActiveText;
+    }
+    
+    .el-menu-item {
+      display: flex;
+      align-items: center;
+    }
+    .menu-item .menu-icon {
+      display: block;
+      color: @menuText;
+      font-size: 18rem;
+    }
+    .sidebar .menu-icon{
+      margin-right: 28rem;
+    }
+    .el-submenu.is-active{
+      background-color: @menuHoverBg;
+    }
+}
+// .layout.collapse .logo{
+//   background-color: #fff;
+// }
+.layout.collapse .sidebar{
+  transition: all 0.3s;
+  left: -220rem;
+}
+.layout.collapse .el-menu-item span{
+  display: none;
+}
+.layout.collapse .sidebar .menu-icon{
+  margin-right: 0;
+}
+.layout.collapse .sidebar .el-tooltip{
+  text-align: center;
+}
+.layout.collapse .el-submenu__title{
+  width: 64rem;
+  line-height: normal;
+  justify-content: center;
+  padding: 0 !important;
+  span,.el-icon-arrow-right{
+    display: none;
+  }
+}
+
+
+.el-menu--popup{
+  background-color: @menuPopperBg;
+}
+.el-menu--vertical{
+  .el-menu-item{
+    color: @menuText;
+    height: 50rem;
+    line-height: 50rem;
+  }
+  
+  .el-menu-item:hover{
+    color: @menuActiveText;
+    background-color: @menuPopperBg;
+  }
+  .el-menu-item:focus, 
+  .el-menu-item.is-active{
+    color: @menuActiveText;
+    background-color: @menuHoverBg;
+  }
+}

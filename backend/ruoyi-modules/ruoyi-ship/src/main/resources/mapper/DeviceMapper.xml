@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.dromara.ship.mapper.DeviceMapper">
+
+   <!--<resultMap id="DeviceResult" type="org.dromara.ship.domain.vo.DeviceVo">
+       <result property="source" column="source" typeHandler="com.baomidou.mybatisplus.extension.handlers.JacksonTypeHandler" />
+   </resultMap>-->
+
+
+
+    <select id="selectShipVoPage" resultType="org.dromara.ship.domain.vo.DeviceVo">
+
+        select d.id, d.name, d.description, d.ipv4, d.infer_freq as inferFreq, d.max_source as maxSource,
+               d.hardware_version as hardwareVersion, d.software_version as softwareVersion, d.status,
+               d.source, d.ship_id as shipId, s.name as shipName
+        from device d left join ship s on d.ship_id = s.id
+         ${ew.getCustomSqlSegment}
+
+    </select>
+</mapper>

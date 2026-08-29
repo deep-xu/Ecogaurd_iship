@@ -1,0 +1,23 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="ruoyi-server" type="docker-deploy" factoryName="dockerfile" server-name="Docker-47.86.30.65">
+    <deployment type="dockerfile">
+      <settings>
+        <option name="imageTag" value="ruoyi/ruoyi-server:5.2.3" />
+        <option name="containerName" value="ship" />
+        <option name="portBindings">
+          <list>
+            <DockerPortBindingImpl>
+              <option name="containerPort" value="8081" />
+              <option name="hostIp" value="0.0.0.0" />
+              <option name="hostPort" value="8081" />
+            </DockerPortBindingImpl>
+          </list>
+        </option>
+        <option name="sourceFilePath" value="ruoyi-admin/Dockerfile" />
+      </settings>
+    </deployment>
+    <method v="2">
+      <option name="Maven.BeforeRunTask" enabled="true" file="$PROJECT_DIR$/pom.xml" goal="clean package" />
+    </method>
+  </configuration>
+</component>

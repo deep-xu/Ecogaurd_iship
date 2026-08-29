@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="https://g.alicdn.com/de/prismplayer/2.9.20/skins/default/aliplayer-min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <noscript>
+      <strong>很抱歉，如果没有启用JavaScript，vms将无法正常运行。 请启用它继续</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+    <script>
+      let KSPROXYGLOBAL = {
+        srs_server:1935,
+        srs_http_api:1985,
+        srs_http_server:8080,
+        websocket: 8083
+      }
+    </script>
+    <script src="./static/publicjs/xlsx.full.min.js"></script>
+    <script src="./static/publicjs/aliplayer/aliplayer-min.js"></script>
+    <script src="./static/publicjs/jswebrtc.min.js"></script>
+    <script src="./static/publicjs/mpegts.js"></script>
+    <script src="./static/publicjs/mqtt.min.js"></script>
+    <script src="./static/publicjs/crypto-js.js"></script>
+  </body>
+</html>

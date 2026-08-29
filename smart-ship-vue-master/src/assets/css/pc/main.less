@@ -1,0 +1,301 @@
+.search-container {
+  height: 56rem;
+  padding: 0 8rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  // box-shadow: 0 0 6rem 4rem rgb(0 0 0 / 10%);
+  // border-radius: 4rem;
+  background-color: #fff;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+
+  >div {
+    margin-right: 8rem;
+    height: 40rem;
+  }
+
+  .search-item {
+    width: 11%;
+    min-width: 150rem;
+    // border: 1rem solid @inputBg;
+    border-radius: 4rem;
+    // background-color: @inputBg;
+  }
+
+  .search-item.times {
+    width: 20%;
+    .el-range-editor--small.el-input__inner{
+      width: 100%;
+      height: 100%;
+      .el-range-separator{
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .right-btns {
+    position: absolute;
+    right: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .search-btns {
+    display: flex;
+    align-items: center;
+  }
+
+  
+
+  .el-button {
+
+    // font-size: 16rem;
+    .z-icon-add {
+      margin-right: 4rem;
+    }
+
+    .z-icon-guolv {
+      margin-right: 4rem;
+    }
+  }
+
+}
+
+
+.btns-container {
+  padding-left: 8rem;
+  position: absolute;
+  top: 18rem;
+  right: 18rem;
+}
+
+.table-container {
+  position: relative;
+  padding: 8rem 8rem 0;
+  margin: 0rem 0rem 0;
+  box-sizing: border-box;
+  // box-shadow: 0 0 6rem 4rem rgb(0 0 0 / 10%);
+  background-color: #fff;
+  border-radius: 4px;
+
+
+  .el-table {
+    height: calc(100% - 58rem);
+    width: calc(100%);
+    background-color: transparent;
+    color: @tableColor;
+  }
+
+  .el-table thead {
+    color: @tableColor;
+  }
+
+  .el-table tr {
+    background-color: transparent;
+  }
+
+  .el-table .cell {
+    text-align: center;
+    font-size: 14rem;
+  }
+  .el-table .el-table__cell{
+    padding: 8rem;
+  }
+  .el-table td.el-table__cell,
+  .el-table th.el-table__cell.is-leaf {
+    // border-bottom: none;
+    border-bottom: 1rem solid #f5f5f5;
+  }
+
+  .el-table--striped .el-table__body tr.el-table__row--striped td.el-table__cell {
+    background-color: @tableStripedBg;
+  }
+
+  .el-table--enable-row-hover .el-table__body tr:hover>td.el-table__cell {
+    background-color: @tableHoverBg;
+  }
+
+  .el-table__header-wrapper {
+    background-color: @tableheaderBg;
+  }
+
+  .el-table th.el-table__cell {
+    background-color: transparent;
+  }
+
+  .el-table .el-table__body-wrapper {
+    height: calc(100% - 50rem);
+    overflow-y: auto;
+  }
+
+  .el-table::before,
+  .el-table--border::after {
+    display: none;
+  }
+
+  .el-table--border {
+    border: none;
+  }
+
+  .table-operate-link {
+    text-decoration: none;
+    color: @btnprimary;
+  }
+
+  .operate-column .cell {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .pagination-model {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    height: 50rem;
+    // background-color: transparent;
+    z-index: 1;
+  }
+}
+
+/* 没有搜索条件 */
+.table-container {
+  height: 100%;
+}
+
+/* 有搜索条件 */
+.table-container.height1 {
+  height: calc(100% - 56rem);
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.el-pagination {
+  position: absolute;
+  bottom: 12rem;
+  right: 10rem;
+  color: @paginationColor;
+
+  .el-input.el-input--small {
+    width: auto;
+  }
+}
+
+.el-pagination__jump,
+.el-pagination__total {
+  color: @paginationColor;
+}
+
+.el-pagination__jump .el-input.el-input--small {
+  height: 28rem;
+  line-height: 28rem;
+}
+
+.el-pagination__sizes .el-input .el-input__inner:hover,
+.el-select .el-input.is-focus .el-input__inner {
+  border-color: @paginationBorderColor;
+}
+
+.el-pagination .el-select .el-input .el-input__inner {
+  background-color: @paginationBg;
+  color: @paginationColor;
+  border-color: @paginationBorderColor;
+}
+
+.el-pagination.is-background .btn-next,
+.el-pagination.is-background .btn-prev,
+.el-pagination.is-background .el-pager li {
+  background-color: @paginationBg;
+  color: @paginationColor;
+  border: 1rem solid @paginationBorderColor;
+}
+
+.el-pagination.is-background .el-pager li:not(.disabled).active {
+  background-color: @paginationHoverBg;
+  color: @btnprimary;
+  ;
+  border: 1rem solid @paginationHoverBg;
+}
+
+.el-pagination.is-background .el-pager li:not(.disabled):hover {
+  color: @btnprimary;
+}
+
+.el-pagination.is-background .btn-next.disabled,
+.el-pagination.is-background .btn-next:disabled,
+.el-pagination.is-background .btn-prev.disabled,
+.el-pagination.is-background .btn-prev:disabled,
+.el-pagination.is-background .el-pager li.disabled {
+  color: @paginationColor;
+}
+
+.el-pager li,
+.el-pagination__sizes .el-input .el-input__inner,
+.el-pagination button,
+.el-pagination span:not([class*=suffix]) {
+  font-size: 14rem;
+}
+
+.el-pagination__editor.el-input.el-input--small .el-input__inner {
+  // height: 28rem;
+  // line-height: 28rem;
+  border-color: @paginationBorderColor;
+  width: 36rem;
+}
+
+.tabs-page {
+  border: 0 !important;
+  .tabs {
+    position: absolute;
+    width: calc(100% - 40rem);
+    height: 32rem;
+    top: 8rem;
+    left: 8rem;
+    color: @mainText;
+
+    ul {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      li {
+        height: 100%;
+        width: auto;
+        padding: 0 16rem;
+        border-top-left-radius: 4rem;
+        border-top-right-radius: 4rem;
+        display: flex;
+        align-items: center;
+        margin-right: 12rem;
+        font-size: 15rem;
+        cursor: pointer;
+      }
+
+      li.active {
+        background-color: @MaincontainerBg;
+      }
+    }
+  }
+
+  .main {
+    height: calc(100% - 32rem);
+    margin-top: 32rem;
+    background-color: @MaincontainerBg;
+    border-radius: 4rem;
+    border-top-left-radius: 0;
+
+    >div {
+      // border: 2rem solid @MaincontainerBg;
+      width: 100%;
+      height: 100%;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.noattention {
+  opacity: 0.5;
+}

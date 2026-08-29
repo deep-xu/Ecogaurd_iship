@@ -1,0 +1,136 @@
+
+
+.el-dialog{
+  background-color: @dialogbg;
+  margin: 0 auto;
+  .el-dialog__header {
+      padding: 15rem 20rem 15rem;
+      border-bottom: 1rem solid @dialogSplit;
+      .el-dialog__title{
+        font-size: 16rem;
+        color: @mainActiveText;
+      }
+  }
+  .el-dialog__headerbtn:focus .el-dialog__close, .el-dialog__headerbtn:hover .el-dialog__close{
+    color: @btnprimary;
+  }
+  .el-dialog__body{
+      max-height: 74vh;
+      overflow: auto;
+      position: relative;
+      padding: 20rem;
+  }
+  .el-carousel--horizontal{
+    width: 100%;
+  }
+  .el-carousel__container{
+    width: 100%;
+    height: 56vh;
+    .el-carousel__item{
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      display: flex;
+      justify-content: center;
+      // align-items: center;
+      .el-image{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      img{
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+      }
+    }
+  }
+}
+.addForm-dialog{
+    .btn-container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button{
+            margin-right: 20rem;
+        }
+    }
+    .btn-container button:last-child{
+        margin-right: 0;
+    }
+}
+
+/* 确认弹出框 */
+.el-message-box{
+  background-color: @dialogbg;
+  border-color: @dialogbg;
+  .el-message-box__header{
+    padding: 15rem 15rem 15rem;
+    border-bottom: 1rem solid @dialogSplit;
+  }
+  .el-message-box__headerbtn:focus .el-message-box__close, 
+  .el-message-box__headerbtn:hover .el-message-box__close{
+    color: @menuActiveText;
+  }
+  .el-message-box__title{
+    color: @mainText;
+  }
+  .el-message-box__content{
+    color: @mainText;
+  }
+}
+/* 上传进度 */
+.process-dialog {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .el-dialog{
+      margin: 0 !important;
+      .el-dialog__header{
+        display: none;
+      }
+      .tips{
+        width: 100%;
+        text-align: center;
+        color: @mainActiveText;
+        margin-bottom: 20rem;
+        font-size: .2rem;
+      }
+      .el-icon-loading{
+        margin-left: 5rem;
+      }
+    }
+    .cancel{
+      margin-top: 30rem;
+      float: right;
+    }
+  }
+
+.pic-show-dialog{
+  .el-dialog{
+    width: 1000px;
+  }
+}
+
+
+/* home */
+.home-confirm{
+  background-color: #072039;
+  border: 1px solid #4f8ab7;
+  .el-message-box__title{
+    color: #fff;
+    font-size: 16rem;
+  }
+  .el-message-box__content{
+    color: #fff;
+    font-size: 14rem;
+  }
+  .el-message-box__header{
+    border-bottom: 1px solid rgb(72 175 255 / 20%);
+  }
+  .el-message-box__headerbtn{
+    top: 15rem;
+  }
+}

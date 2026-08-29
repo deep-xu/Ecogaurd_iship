@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.dromara.ship.mapper.AlertMapper">
+
+    <select id="queryById" parameterType="String" resultType="org.dromara.ship.domain.vo.AlertVo">
+        SELECT * FROM alert where id = ${id}
+    </select>
+
+    <select id="queryListAll" resultType="org.dromara.ship.domain.vo.AlertVo">
+        select * from alert order by alert_time desc
+    </select>
+    <select id="queryList" resultType="org.dromara.ship.domain.vo.AlertVo">
+
+    </select>
+    <select id="queryPageList" resultType="org.dromara.ship.domain.vo.AlertVo">
+
+    </select>
+
+    <select id="queryDeviceAlertStat" resultType="org.dromara.ship.domain.vo.DeviceAlertStatVO">
+        select device_id as deviceId, date_format(from_unixtime(alert_time), '%Y-%m-%d') as date, count(*) as num from alert group by device_id, date
+    </select>
+</mapper>
